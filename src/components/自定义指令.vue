@@ -27,7 +27,6 @@ export default {
     };
   },
   created() {
-    console.log(1);
     this.$nextTick(() => {
       console.log(2);
     });
@@ -38,15 +37,17 @@ export default {
   methods: {
     focusConten() {
       this.dialogFormVisible = false;
+      this.value = "撒大声地";
+
       this.$parent.$data.focusValue = this.value;
     }
   },
   directives: {
     focus: {
-      inserted: function(el, { value }) {
+      inserted: function(el) {
         el.getElementsByTagName("textarea")[0].focus();
       },
-      update: function(el, { value }) {
+      update: function(el) {
         el.getElementsByTagName("textarea")[0].focus();
       }
     }

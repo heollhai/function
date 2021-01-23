@@ -1,29 +1,29 @@
-<template>
-  <div style="height: calc(100% - 132px);">
-    <!-- 
+<!-- 
 				:options="dataGrid.options"  			全局属性
 				:list="dataGrid.list"					数据
 				:columns="dataGrid.columns" 			列属性
 				:operates="dataGrid.operates"			操作列
 				:pagination="dataGrid.pagination"		分页  
 		 -->
-    <data-grid
+<template>
+  <div style="height: calc(100% - 132px);">
+    <!-- <DataGrids
       :options="dataGrid.options"
       :list="dataGrid.list"
       :columns="dataGrid.columns"
       :operates="dataGrid.operates"
       :pagination="dataGrid.pagination"
-    ></data-grid>
-  </div>
-</template>
+    /></DataGrids> -->
+		</div>
+</template> 
 
 <script>
-import DataGrid from "@/components/DataGrid.vue";
+// import DataGrids from "@/components/DataGrid.vue";
 import { biaoGe } from "@/utils/api.js";
 export default {
   name: "biaoGeFengZhuang",
   components: {
-    DataGrid
+    // DataGrids
   },
   created() {
     this.biaoGeList();
