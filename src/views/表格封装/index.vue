@@ -7,23 +7,23 @@
 		 -->
 <template>
   <div style="height: calc(100% - 132px);">
-    <!-- <DataGrids
+    <DataGrids
       :options="dataGrid.options"
       :list="dataGrid.list"
       :columns="dataGrid.columns"
       :operates="dataGrid.operates"
       :pagination="dataGrid.pagination"
-    /></DataGrids> -->
-		</div>
-</template> 
+    /></DataGrids>
+  </div>
+</template>
 
 <script>
-// import DataGrids from "@/components/DataGrid.vue";
+import DataGrids from "@/components/DataGrid.vue";
 import { biaoGe } from "@/utils/api.js";
 export default {
   name: "biaoGeFengZhuang",
   components: {
-    // DataGrids
+    DataGrids
   },
   created() {
     this.biaoGeList();
@@ -36,7 +36,7 @@ export default {
     },
     biaoGeList() {
       biaoGe().then(res => {
-		  console.log(res,'resresres');
+        console.log(res, "resresres");
         this.dataGrid.list = [];
         this.dataGrid.list = res.data;
         this.dataGrid.pagination.total = this.dataGrid.list.length;
@@ -94,27 +94,27 @@ export default {
               label: "详情",
               hidden: false,
               method: (scope, index) => {
-                this.showEvnInfo(scope,index);
+                this.showEvnInfo(scope, index);
               }
             },
             {
               label: "编辑",
               hidden: false,
               method: (scope, index) => {
-                console.log("点击了编辑", scope,index);
+                console.log("点击了编辑", scope, index);
               }
             },
             {
               label: "查看",
               hidden: false,
               method: (scope, index) => {
-                console.log("点击了查看", scope,index)
+                console.log("点击了查看", scope, index);
               }
             }
           ]
         },
         // 分页
-           pagination: {
+        pagination: {
           hidden: false,
           currentPage: 1,
           pageSizes: [5, 8, 10, 40, 50, 100],

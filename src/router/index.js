@@ -233,6 +233,19 @@ const routes = [
         /* webpackChunkName: "chaChao" */
         "../views/keep-alive的使用/index.vue"
       )
+  },
+  {
+    //拖拽
+    path: "/mobile",
+    name: "Mobile",
+    meat: {
+      name: "可移动box+焦点获取"
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "chaChao" */
+        "../views/mobileBox/index.vue"
+      )
   }
 ];
 

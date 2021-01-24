@@ -43,6 +43,6 @@
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
-   "parser": "babel-eslint"
-   }
+    "parser": "babel-eslint"
+  }
 }
