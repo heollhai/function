@@ -4,6 +4,10 @@ import router from "./router";
 import store from "./store";
 import "normalize.css";
 import "lib-flexible";
+// 懒加载
+import vueLazyload from "vue-lazyload";
+// mock  数据
+import "./mock";
 
 import BaiduMap from "vue-baidu-map";
 import { addCookie, getCookie, delCookie } from "@/utils/cookie";
@@ -13,6 +17,12 @@ Vue.prototype.$cookieStore = {
   delCookie
 };
 
+Vue.use(vueLazyload, {
+  preLoad: 1.3,
+  error: require("./assets/da.png"),
+  loading: require("./assets/loading.jpg"),
+  attempt: 1
+});
 Vue.use(BaiduMap, {
   ak: "W5sheCw1AGukCfMGlk8ARuODYcQ2Nlm2"
 });

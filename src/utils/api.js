@@ -22,20 +22,3 @@ export function biaoGe() {
     method: "get"
   });
 }
-// //轮播
-// export function SwiperList(){
-//  return request({
-//   url:'product/banner/getBySeller/4bc4027c645343f09a964b5c2e9f875b',
-//   method:'get',
-//  })
-// }
-//三级联动获取方式
-
-//获取  post方式
-// export function addprodutAttrList(data){
-//  return request({
-//   url:'index/Api/create_product_cate',
-//   method:'post',
-//   data:data
-//  })
-// }

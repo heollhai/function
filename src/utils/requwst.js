@@ -4,7 +4,7 @@ import { Message } from "element-ui";
 
 //创建axios的实例
 const service = axios.create({
-  baseURL: " http://localhost:3001" //'/api/',//'http://10.10.10.250:8001/',//api的根url地址
+  baseURL: " " // http://localhost:3001//'/api/',//'http://10.10.10.250:8001/',//api的根url地址
   // timeout:1500,//数据响应的过期时间
   //headers:{"Content-Type":"application/x-www-form-urlencoded"}//请求的文件类型的设置
 });
