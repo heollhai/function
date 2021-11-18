@@ -17,22 +17,13 @@
 </template>
 
 <script>
-import { comments, liandong } from "@/utils/api";
 export default {
   name: "zujian",
   created() {
     // console.log(this.data,this.ceshidata, '0klddddddddddddd');
   },
-  computed: {
-    datas: function() {
-      this.funDiaoYong(this.data.id);
-    },
-    dataa: function() {
-      console.log(this.data.id, "this.data.id00000000000000000000000000000o;");
-    }
-  },
+  computed: {},
   watch: {
-    datas: function() {}, //监听计算里面的变化
     dataa: function() {}
   },
   mounted() {},

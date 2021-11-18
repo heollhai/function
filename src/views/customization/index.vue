@@ -38,10 +38,10 @@ export default {
     };
   },
   methods: {
-    onsuccess(ile, fileList) {
+    onsuccess(file, fileList) {
       console.log(file, fileList);
     },
-    primary(ile, fileList) {
+    primary(file, fileList) {
       console.log(file, fileList);
     },
     handleRemove(file, fileList) {
@@ -58,6 +58,7 @@ export default {
       );
     },
     beforeRemove(file, fileList) {
+      console.log(fileList);
       return this.$confirm(`确定移除 ${file.name}？`);
     },
     imageChange() {}

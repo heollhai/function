@@ -8,6 +8,8 @@ import "lib-flexible";
 import vueLazyload from "vue-lazyload";
 // mock  数据
 import "./mock";
+//登录效验
+import "./permission";
 
 import BaiduMap from "vue-baidu-map";
 import { addCookie, getCookie, delCookie } from "@/utils/cookie";

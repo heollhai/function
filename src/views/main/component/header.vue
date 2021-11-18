@@ -43,7 +43,7 @@ export default {
   height: 60px;
   .headerCss {
     font-size: 30px;
-    color: $theme-bgcolor;
+    // color: $theme-bgcolor;
     border: none;
   }
   .headerPath {

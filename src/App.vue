@@ -1,6 +1,6 @@
 <template>
   <div id="app" style="height: 100%;">
-    <el-dialog title="菜单页" :visible.sync="BoxType">
+    <!-- <el-dialog title="菜单页" :visible.sync="BoxType">
       <div style="height: 400px;overflow-y: hidden;overflow-y: scroll;">
         <div
           v-for="(item, key) in options"
@@ -15,7 +15,7 @@
     </el-dialog>
     <div id="nav">
       <el-button @click="BoxType = true">打 开 菜 单</el-button>
-    </div>
+    </div> -->
     <keep-alive include="keepAliveUse">
       <router-view v-if="isRouterAlive"></router-view>
     </keep-alive>
@@ -31,7 +31,8 @@ export default {
   },
   watch: {},
   created() {
-    this.options = this.$router.options.routes;
+    // this.options = this.$router.options.routes;
+    console.log(this.$router, "$router---------------------------");
   },
   data() {
     return {
@@ -41,27 +42,27 @@ export default {
       options: [],
       isRouterAlive: true
     };
-  },
-  mounted() {
-    console.log(document.querySelector("#nav").offsetHeight, "lllll");
-    console.log(document.body.offsetHeight, "kkk");
-  },
-  methods: {
-    pathClick(path, key) {
-      this.$router.push({
-        path: path
-      });
-      this.spanIndex = key; //把值给到 spanIndex
-    },
-    // 关闭view 在打开  view 刷新页面
-    refresh() {
-      this.isRouterAlive = false;
-      this.$nextTick(function() {
-        this.isRouterAlive = true;
-        console.log("wo刷新了");
-      });
-    }
   }
+  // mounted() {
+  //   console.log(document.querySelector("#nav").offsetHeight, "lllll");
+  //   console.log(document.body.offsetHeight, "kkk");
+  // },
+  // methods: {
+  //   pathClick(path, key) {
+  //     this.$router.push({
+  //       path: path
+  //     });
+  //     this.spanIndex = key; //把值给到 spanIndex
+  //   },
+  //   // 关闭view 在打开  view 刷新页面
+  //   refresh() {
+  //     this.isRouterAlive = false;
+  //     this.$nextTick(function() {
+  //       this.isRouterAlive = true;
+  //       console.log("wo刷新了");
+  //     });
+  //   }
+  // }
 };
 </script>
 <style lang="scss" scoped="scoped">

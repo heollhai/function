@@ -21,7 +21,7 @@ const evn = {
     }
   },
   actions: {
-    setBaseInfo({ commit, state }, info) {
+    setBaseInfo({ commit }, info) {
       commit("SETBASEINFO", info);
     }
   },

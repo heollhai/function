@@ -161,7 +161,6 @@
 
 <script>
 import store from "../../store/index.js";
-import { mapState } from "vuex";
 import { EVENT_INFO_FIELD } from "../storedata/datajs.js";
 export default {
   filters: {
@@ -173,16 +172,14 @@ export default {
       return value;
     }
   },
-  computed: {
-    mapState() {}
-  },
+  computed: {},
   created() {
     console.log(store, this.$store, "store");
     this.dataconfig = JSON.parse(sessionStorage.getItem("data"));
     // console.log(aa)
   },
   mounted() {
-    this.optionProps.forEach((ele, index) => {
+    this.optionProps.forEach(ele => {
       ele.chil = [...this.options];
     });
   },
@@ -337,9 +334,9 @@ export default {
       console.log(JSON.parse(localStorage.getItem("swiperArr")), "112");
       if (value.length !== 0) {
         console.log(value, label);
-        value.forEach((ele, index) => {
-          // console.log(ele[index])
-        });
+        // value.forEach((ele, index) => {
+        //   // console.log(ele[index])
+        // });
       }
     }
   }

@@ -4,8 +4,8 @@
     <button @click="fenlei">文件后缀名分类</button>
     <button @click="dataClassify">日期分类(对字符串进行分类)</button>
     <div class="dataClassifyclass">
-      <template v-for="item in dataClassifyList">
-        <div>{{ item.data }}</div>
+      <template v-for="(item, index) in dataClassifyList">
+        <div :key="index">{{ item.data }}</div>
       </template>
     </div>
   </div>
@@ -66,7 +66,6 @@ export default {
   methods: {
     //日期分类
     dataClassify() {
-      let value = [];
       var fenlei = /(2020-10-1|2020-10-2|2020-10-3|2020-10-4|2020-10-5|2020-10-6)/; //图片类型
       this.dataClassifyList.forEach(ele => {
         if (fenlei.test(ele.data)) {

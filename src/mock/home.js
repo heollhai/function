@@ -5,7 +5,7 @@ import Mock from "mockjs";
 export default {
   getStatisticalData: num => {
     let List = [];
-    num = parseInt(num.url.substring(num.url.length - 1, num.url.length));
+    num = parseInt(num.url.substring(num.url.length - 1, num.url.length)) || 2;
     for (let i = 0; i < num; i++) {
       List.push(
         Mock.mock({

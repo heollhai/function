@@ -1,4 +1,5 @@
 export function addCookie(objName, objValue, objHours) {
+  console.log(objHours);
   //添加cookie
   var str = objName + "=" + escape(objValue);
 
@@ -27,7 +28,7 @@ export function delCookie(name) {
   document.cookie = name + "=a; expires=" + date.toGMTString();
 }
 
-function allCookie() {
+export function allCookie() {
   //读取所有保存的cookie字符串
   var str = document.cookie;
   if (str == "") {

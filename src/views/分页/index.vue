@@ -60,52 +60,9 @@
   </div>
 </template>
 <script>
-import { againsTsortKey } from "@/components/公共方法";
 export default {
   name: "dataList",
-  mounted() {
-    let bb = [1, 2, 3, 4];
-    let dd = {
-      a: "1"
-    };
-    let cv = bb && 3;
-
-    console.log(Array.isArray(dd), "c", Object.prototype.toString.call(dd));
-
-    let aa = [
-      {
-        a: "1"
-      },
-      {
-        a: "2"
-      },
-      {
-        a: "4"
-      },
-      {
-        a: "3"
-      }
-    ];
-    let b = JSON.parse(JSON.stringify(againsTsortKey(aa, "a")));
-    let a = [1, 2, 3, 4];
-    //循环给表格30条数据
-    let value = {};
-    for (var i = 0; i < 31; i++) {
-      value = {
-        date: "2016-05-02",
-        name: "王小虎",
-        address: "上海市普陀区金沙江路 1518 弄"
-      };
-      this.tableData.push(value);
-    }
-    console.log(
-      this.tableData.slice(
-        (this.currentPage - 1) * this.pagesize,
-        this.currentPage * this.pagesize
-      ),
-      "tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)"
-    );
-  },
+  mounted() {},
   data() {
     return {
       height: "calc(100% - 40px)",

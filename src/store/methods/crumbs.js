@@ -1,3 +1,4 @@
+//首页
 export default {
   namespaced: true, //带命名空间的模块    ****不要忘了
   state: {
